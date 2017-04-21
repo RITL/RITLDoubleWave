@@ -28,20 +28,20 @@ class ViewController: UIViewController {
         
         //添加余弦函数
         secondWave = RITLWaveView(frame: CGRect(x: 0, y: -20, width: self.view.frame.width, height: 220))
-        
+
         secondWave?.alpha = 0.6
-        
+
         //设置属性
         secondWave?.wavesSpeed = 0.04
         secondWave?.waveA = 13
         secondWave?.waveW = 0.5 / 30.0
-        
+
         //设置路径
         secondWave?.waveHandler = {
             
             $0 * cos($1 * $2 + $3)
         }
-    
+
         view.addSubview(secondWave!)
         
     }

@@ -16,7 +16,7 @@ class RITLWaveView: UIView {
     /// 波形处理,振幅-周期-index-位移,默认正弦函数
     var waveHandler :((_ waveA :CGFloat,_ waveW :CGFloat,_ index:CGFloat, _ offSet :CGFloat) -> (CGFloat)) = {
      
-        return CGFloat($0 * sin($1 * $2 + $3))
+        return $0 * sin($1 * $2 + $3)
     }
     
     /// 波浪颜色
